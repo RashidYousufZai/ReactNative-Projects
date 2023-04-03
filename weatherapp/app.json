@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "weather App",
+    "slug": "weather-app",
+    "discription": "this is a practice weather app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.rashidyousufzai.weatherapp"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e76fd5ad-47b9-4e81-a3a5-65ad3d3a977d"
+      }
+    }
+  }
+}

@@ -17,19 +17,19 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         {/* <Stack.Screen name="Home" component={Home} /> */}
-        <Stack.Screen name="Home">
+        <Stack.Screen name="Home" options={{ headerShown: false, headerTitleStyle: { fontSize: 25 }, headerTitleAlign: "center" }}>
           {(props) => <Home channelname="Learning Point" />}
         </Stack.Screen>
-        <Stack.Screen name="About">
+        <Stack.Screen name="About" options={{ headerShown: true, headerTitleStyle: { fontSize: 25 }, headerTitleAlign: "center" }}>
           {() => <About />}
         </Stack.Screen>
-        <Stack.Screen name="Contact">
+        <Stack.Screen name="Contact" options={{ headerShown: true, headerTitleStyle: { fontSize: 25 }, headerTitleAlign: "center" }}>
           {() => <Contact />}
         </Stack.Screen>
-        <Stack.Screen name="Course">
+        <Stack.Screen name="Course" options={{ headerShown: true, headerTitleStyle: { fontSize: 25 }, headerTitleAlign: "center" }}>
           {() => <Course />}
         </Stack.Screen>
-        <Stack.Screen name="UserData">
+        <Stack.Screen name="Students" options={{ headerShown: true, headerTitleStyle: { fontSize: 25 }, headerTitleAlign: "center" }}>
           {() => <UserData />}
         </Stack.Screen>
       </Stack.Navigator>

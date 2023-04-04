@@ -6,42 +6,40 @@ export default function Home(props) {
     const description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. ";
 
     return (
-        <ScrollView style={styles.mainContainer}>
-            <View style={styles.homeTop}>
-                <Image
-                    style={styles.headerImage}
-                    resizeMode="contain"
-                    source={require("../../assets/logo.jpg")}
-                />
+        <>
+            <ScrollView style={styles.mainContainer}>
+                <View style={styles.homeTop}>
+                    <Image
+                        style={styles.headerImage}
+                        resizeMode="contain"
+                        source={require("../../assets/logo.jpg")}
+                    />
 
-                <Text style={styles.mainHeader}>Welcome to</Text>
-                <Text
-                    style={[
-                        styles.mainHeader,
-                        {
-                            fontSize: 33,
-                            color: "#4c5dab",
-                            marginTop: 0,
-                        },
-                    ]}>
-                    {props.channelname}
-                </Text>
+                    <Text style={styles.mainHeader}>Welcome to</Text>
+                    <Text
+                        style={[
+                            styles.mainHeader,
+                            {
+                                fontSize: 33,
+                                color: "#4c5dab",
+                                marginTop: 0,
+                            },
+                        ]}>
+                        {props.channelname}
+                    </Text>
 
-                <Text style={styles.paraStyle}>{description} </Text>
-            </View>
+                    <Text style={styles.paraStyle}>{description} </Text>
+                </View>
+
+
+            </ScrollView>
 
             <View style={styles.menuStyle}>
                 <View style={styles.lineStyle}></View>
                 <Menu />
-                <View
-                    style={[
-                        styles.lineStyle,
-                        {
-                            marginVertical: 10,
-                        },
-                    ]}></View>
+                <View style={styles.lineStyleBottom}></View>
             </View>
-        </ScrollView>
+        </>
     );
 }
 
@@ -95,8 +93,14 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: "grey",
     },
+    lineStyleBottom: {
+        marginBottom: 10,
+    },
     menuStyle: {
         display: "flex",
         justifyContent: 'flex-end',
+        backgroundColor: "#0d99ff",
+        width: "100%",
+        color: "#fff"
     }
 });

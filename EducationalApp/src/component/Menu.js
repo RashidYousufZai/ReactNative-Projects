@@ -2,6 +2,9 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
+import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+
 const Menu = () => {
 
     const navigation = useNavigation();
@@ -11,25 +14,29 @@ const Menu = () => {
             <TouchableOpacity
                 style={styles.buttonStyle}
                 onPress={() => { navigation.navigate("Course") }}>
-                <Text>Course</Text>
+                <Entypo name="open-book" size={24} color="#fff" />
+                <Text style={styles.text}>Course</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.buttonStyle}
                 onPress={() => { navigation.navigate("About") }}>
-                <Text>About</Text>
+                <AntDesign name="contacts" size={24} color="#fff" />
+                <Text style={styles.text}>About</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.buttonStyle}
-                onPress={() => { navigation.navigate("UserData") }}>
-                <Text>Students</Text>
+                onPress={() => { navigation.navigate("Students") }}>
+                <AntDesign name="user" size={24} color="#fff" />
+                <Text style={styles.text} >Students</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.buttonStyle}
-                onPress={() => { navigation.navigate("Course") }}>
-                <Text>Course</Text>
+                onPress={() => { navigation.navigate("Contact") }}>
+                <AntDesign name="contacts" size={24} color="#fff" />
+                <Text style={styles.text}>Contact</Text>
             </TouchableOpacity>
         </View>
     )
@@ -50,4 +57,11 @@ const styles = StyleSheet.create({
         height: 50,
         aspectRatio: 1,
     },
+    buttonStyle: {
+        display: "flex",
+        alignItems: "center"
+    },
+    text: {
+        color: "#fff"
+    }
 })
